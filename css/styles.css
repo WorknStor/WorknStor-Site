@@ -4,16 +4,16 @@
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
   background: #05070a;
   color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
   max-width: 100%;
 }
 
-/* NAV */
+/* TOP */
 .top {
   background: #000;
   border-bottom: 2px solid #ff7a12;
@@ -27,19 +27,15 @@ img {
 }
 
 .logo {
-  width: 200px;
-}
-
-.nav-links {
-  display: none;
+  width: 180px;
 }
 
 .btn {
   background: linear-gradient(135deg, #ffbd63, #ff7a12);
-  padding: 12px 18px;
-  border-radius: 8px;
   color: #000;
+  padding: 10px 16px;
   font-weight: 900;
+  border-radius: 6px;
   text-decoration: none;
 }
 
@@ -51,33 +47,43 @@ img {
 }
 
 /* HERO */
-.hero-art {
-  height: 400px;
-  background: url("../images/worknstor-marion-flex-hero.png") center / cover no-repeat;
-  position: relative;
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.hero-overlay {
-  position: absolute;
-  bottom: 30px;
-  left: 20px;
+.hero-copy {
+  padding: 30px;
+}
+
+.kicker {
+  color: #f5b85a;
+  letter-spacing: 3px;
+  font-weight: 900;
 }
 
 .hero h1 {
   font-size: 48px;
-  margin: 0;
 }
 
 .hero h1 span {
   color: #ff7a12;
 }
 
-.hero h2 {
-  margin: 10px 0;
+.hero-art {
+  min-height: 400px;
+  background: url("../images/worknstor-marion-flex-hero.png") center / cover no-repeat;
+  position: relative;
 }
 
-.hero p strong {
-  color: #ff7a12;
+.badge {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: black;
+  border: 3px solid #ff7a12;
+  padding: 10px;
+  font-weight: bold;
 }
 
 /* FEATURES */
@@ -88,48 +94,40 @@ img {
 
 .icon {
   padding: 20px;
-  text-align: center;
   border: 1px solid #222;
-  font-weight: bold;
+  text-align: center;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
-  padding: 40px 20px;
+  padding: 30px;
 }
 
 .section h2 span {
   color: #ff7a12;
 }
 
-/* INCLUDES */
-.includes {
-  display: grid;
-  gap: 10px;
-}
-
-.include {
-  border: 1px solid #ff7a12;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-/* PRICING */
+.includes,
 .units {
   display: grid;
   gap: 15px;
 }
 
+/* INCLUDE */
+.include {
+  border: 1px solid #ff7a12;
+  padding: 12px;
+}
+
+/* CARD */
 .card {
   border: 1px solid #ff7a12;
-  border-radius: 10px;
-  padding: 15px;
 }
 
 .card h3 {
   background: #ff7a12;
+  margin: 0;
   padding: 10px;
-  margin: -15px -15px 10px;
 }
 
 .price {
@@ -137,8 +135,18 @@ img {
   font-weight: bold;
 }
 
-/* FOOTER */
-.footer {
-  padding: 30px;
-  text-align: center;
+/* DESKTOP */
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  .icon-row {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .includes,
+  .units {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
