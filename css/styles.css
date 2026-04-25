@@ -240,15 +240,11 @@ img {
   }
 
   .hero {
-    display: grid;
-    grid-template-columns: .6fr 1.4fr;
-    max-width: 1500px;
-    margin: 0 auto;
-    min-height: 680px;
+  display: block;
+  max-width: 1500px;
+  margin: 0 auto;
+  min-height: auto;
   }
-
-  .hero-copy {
-    padding: 70px 34px;
   }
 
   .hero h1 {
