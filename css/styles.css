@@ -1,3 +1,4 @@
+/* RESET */
 * {
   box-sizing: border-box;
 }
@@ -17,6 +18,7 @@ img {
   height: auto;
 }
 
+/* HEADER */
 .top {
   background: #000;
   border-bottom: 2px solid #ff7a12;
@@ -56,14 +58,14 @@ img {
   border-bottom: 1px solid rgba(255,122,18,.4);
 }
 
-/* MOBILE HERO — text and image separated */
+/* HERO (MOBILE FIRST) */
 .hero {
   display: block;
   background: #05070a;
 }
 
 .hero-copy {
-  padding: 38px 24px 28px;
+  padding: 36px 24px;
   background:
     radial-gradient(circle at 15% 10%, rgba(255,122,18,.18), transparent 30%),
     #05070a;
@@ -78,7 +80,7 @@ img {
 }
 
 .hero h1 {
-  font-size: 54px;
+  font-size: 52px;
   line-height: .9;
   margin: 0;
   text-transform: uppercase;
@@ -95,7 +97,7 @@ img {
 }
 
 .hero p {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -104,35 +106,20 @@ img {
   color: #ff7a12;
 }
 
+/* IMAGE SECTION */
 .hero-art {
   position: relative;
-  min-height: 430px;
+  min-height: 480px;
   background:
-    linear-gradient(to bottom, rgba(0,0,0,.05), rgba(0,0,0,.25)),
     url("../images/worknstor-marion-flex-hero.png") center top / cover no-repeat;
 }
 
+/* HIDE BADGE (fix overlap issue) */
 .badge {
-  position: absolute;
-  right: 18px;
-  bottom: 20px;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  border: 4px solid #ff7a12;
-  background: rgba(0,0,0,.9);
-  color: #ff7a12;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-weight: 900;
+  display: none;
 }
 
-.badge b {
-  font-size: 38px;
-}
-
+/* ICON ROW */
 .icon-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -148,45 +135,51 @@ img {
   text-transform: uppercase;
 }
 
+/* SECTIONS */
 .section {
-  padding: 42px 24px;
+  padding: 40px 20px;
 }
 
 .section h2 {
-  font-size: 42px;
-  line-height: 1;
+  font-size: 36px;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .section h2 span {
   color: #ff7a12;
 }
 
-.includes,
-.units,
-.split {
+/* FEATURES */
+.includes {
   display: grid;
-  gap: 18px;
+  gap: 15px;
 }
 
-.include,
-.card,
-.panel {
+.include {
   background: linear-gradient(145deg, #07101a, #05070a);
   border: 1px solid rgba(255,122,18,.45);
-  border-radius: 14px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 18px;
+  font-weight: 900;
 }
 
-.include::before {
-  content: "✓";
-  color: #ff7a12;
-  margin-right: 10px;
+/* PRICING */
+.units {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background: #0a0d12;
+  border: 1px solid rgba(255,122,18,.4);
+  border-radius: 14px;
+  padding: 18px;
 }
 
 .card h3 {
-  margin: -20px -20px 16px;
-  padding: 16px;
+  margin: 0 0 10px;
+  padding: 12px;
   background: linear-gradient(90deg, #ff7a12, #b84c08);
   text-transform: uppercase;
 }
@@ -194,6 +187,19 @@ img {
 .price {
   color: #ff7a12;
   font-weight: 900;
+}
+
+/* SPLIT PANELS */
+.split {
+  display: grid;
+  gap: 20px;
+}
+
+.panel {
+  background: #0a0d12;
+  border: 1px solid rgba(255,122,18,.35);
+  border-radius: 14px;
+  padding: 20px;
 }
 
 .panel h3 {
@@ -208,15 +214,15 @@ img {
   margin: 8px 0;
 }
 
+/* FOOTER */
 .footer {
-  padding: 32px 24px;
+  padding: 30px 20px;
   border-top: 1px solid rgba(255,122,18,.35);
 }
 
-.footer-logo,
 .footer img {
-  width: 260px !important;
-  max-width: 80vw !important;
+  width: 220px;
+  margin-top: 15px;
 }
 
 /* DESKTOP */
@@ -235,30 +241,28 @@ img {
 
   .hero {
     display: grid;
-    grid-template-columns: .58fr 1.42fr;
+    grid-template-columns: .6fr 1.4fr;
     max-width: 1500px;
     margin: 0 auto;
     min-height: 680px;
   }
 
   .hero-copy {
-    padding: 70px 34px 34px;
+    padding: 70px 34px;
   }
 
   .hero h1 {
-    font-size: 100px;
+    font-size: 95px;
   }
 
   .hero-art {
     min-height: 680px;
-    clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 100%);
-    border-left: 3px solid #ff7a12;
   }
 
   .icon-row {
+    grid-template-columns: repeat(5, 1fr);
     max-width: 1450px;
     margin: 0 auto;
-    grid-template-columns: repeat(5, 1fr);
   }
 
   .section {
@@ -281,53 +285,5 @@ img {
   .footer {
     max-width: 1450px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-  }@media (max-width: 899px) {
-  .hero-copy {
-    display: none;
   }
-
-  .hero {
-    display: block;
-    padding: 0;
-    background: #05070a;
   }
-
-  .hero-art {
-    display: block;
-    min-height: 620px;
-    background:
-      linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.08)),
-      url("../images/worknstor-marion-flex-hero.png") center top / cover no-repeat;
-  }
-
-  .badge {
-    display: none;
-  }
-    @media (max-width: 899px) {
-  .hero-copy {
-    display: none;
-  }
-
-  .hero {
-    display: block;
-    padding: 0;
-    background: #05070a;
-  }
-
-  .hero-art {
-    display: block;
-    min-height: 620px;
-    background:
-      linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.08)),
-      url("../images/worknstor-marion-flex-hero.png") center top / cover no-repeat;
-  }
-
-  .badge {
-    display: none;
-  }
-    }
-  }
-}
