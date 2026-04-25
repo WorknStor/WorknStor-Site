@@ -250,7 +250,54 @@ h2 {
     text-transform: uppercase;
     font-weight: 900;
   }
+@media (max-width: 899px) {
+  .hero {
+    display: block;
+    min-height: auto;
+    padding: 0;
+    background: #05070a;
+  }
 
+  .hero-copy {
+    padding: 36px 24px 28px;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(255,122,18,.18), transparent 30%),
+      #05070a;
+  }
+
+  .hero h1 {
+    font-size: 54px;
+    line-height: .9;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .hero-art {
+    display: block;
+    min-height: 440px;
+    background:
+      linear-gradient(to bottom, rgba(0,0,0,.05), rgba(0,0,0,.25)),
+      url("../images/worknstor-marion-flex-hero.png") center top / cover no-repeat;
+  }
+
+  .badge {
+    width: 110px;
+    height: 110px;
+    right: 18px;
+    bottom: 20px;
+    font-size: 14px;
+  }
+
+  .badge b {
+    font-size: 38px;
+  }
+}
   .icon-row {
     grid-template-columns: repeat(5, 1fr);
   }
