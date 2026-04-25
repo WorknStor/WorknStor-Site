@@ -111,7 +111,9 @@ img {
   position: relative;
   min-height: 480px;
   background:
-    url("../images/worknstor-marion-flex-hero.png") center top / cover no-repeat;
+    url("../images/worknstor-marion-flex-hero.png") center top / contain no-repeat;
+  background-color: #05070a;
+}
 }
 
 /* HIDE BADGE (fix overlap issue) */
