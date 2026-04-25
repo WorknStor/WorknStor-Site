@@ -356,6 +356,13 @@ img {
   .clear-badge span {
     font-size: 12px;
   }
+  .feature-strip article img {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 12px;
+  filter: drop-shadow(0 0 10px rgba(255,122,0,.35));
+}
+``` [❶](code://python)
 }
   }
 }
